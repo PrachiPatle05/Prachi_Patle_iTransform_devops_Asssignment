@@ -1,0 +1,245 @@
+Assignments:-
+
+Que1. List the contents of a directory and their attributes
+Ans. ls
+
+Que2. Long list the content with file, directory ownership, permissions,sizes, etc…
+Ans. ls -l
+
+Que3. Display the size of the file in human readable format
+Ans. ls -l -h
+
+Que4.Show all files and folders including hidden one
+Ans. ls -l -a
+
+Que5. list directories recursively
+Ans. ls -R
+
+Que6. Sort the files by size with largest at the top
+Ans. ls -S
+
+Que7. Sort the files by last time modified displaying the newest first.
+Ans. ls -t
+
+Que8. Diplay the location of a program/command, where it is installed.
+Ans. realpath <filename>
+
+Que9. Which command is used to switch directory from one to another
+Ans. cd
+
+Que10. List all the environment variables set for the current shell environment
+Ans. printenv and env
+
+Que11. Did you notice something in the output of "env" command?
+Ans. It will print a list of the current environment variables.
+
+Que12. Which command is used to print the text or any variables value in the Console/Terminal?
+Ans. echo
+
+Que13. Print the value of the env variable "PATH" on the console
+Ans. echo $PATH
+
+Que14. Is linux a case-sensitive operating system?
+Ans. YES
+
+Que15. Is, "Ls" same as "ls"?
+Ans. No
+
+Que16. Display your currently logged in user
+Ans. whoami
+
+Que17. how do you change the currrently logged in user to another user?
+Ans. sudo -l <anotherusername>
+
+Que18.Which command is used to leave a shell environment that you are currently logged in to?
+Ans. exit
+
+Que19.How do you reboot the system?
+Ans. sudo reboot
+
+Que20. How do you shutdown the system?
+Ans. sudo shutdown
+
+Que21.Display all the major running processes in the system
+Ans. ps command .
+        PID,PPID,PGID,WINPID,TTY,UID,STIME,COMMAND are examples. 
+
+Que22.Understand the output of command used in above question of displaying processes, explain the meaning of each column and what data it displays?
+Ans. The PID column displays the process-id of each running process, the USER column displays the username of the task owner,
+     The PR column displays priority of the process, the NI displays the nice value of the process, the VIRT displays virtual memory usage of process.
+     The RES column displays physical memory usage, the SHR displays shared memory usage, the S column displays current status of process.
+     The %CPU displays cpu time in percentage, %MEM displays memory used in percentage, TIME+ displays the total cpu uptime.
+     The COMMAND  columns dispays the commands name. 
+
+Que23.Display the name of the system kernel
+Ans. uname -s
+
+Que24.display the kernel release number
+Ans. uname -r
+
+Que25.display the machine type of the current kernel
+Ans. uname -m
+
+Que26.Display the name of the operating system that the kernel is running on
+Ans. uname -o
+
+Que27.Display all info that uname command can show.
+Ans. uname -a
+
+Que28.Display the name of directory that you are currently pointing to
+Ans. pwd
+
+Que29. change the current directory to another directory that you have in your system.
+Ans. cd
+
+Que30.Go up one directory
+Ans. cd ..
+
+Que31.Return to last directory
+Ans. cd -
+
+Que32. change the current directory to home(logged in user's) directory
+Ans. cd ~
+
+Que33.How to check all the command used from the prompt (Command History)
+Ans. history
+
+Que34.Que.In which file the history of commands are stored in?
+Ans. .bash_history
+
+Que35.How many lines of history does the system keep and from where you can change it?
+Ans. Upto 1000 lines of history can be stored, its default is 500 which can be changed in $HISTSIZE file
+
+Que36. How can you modify bash's history behaviour
+Ans. $HISTSIZE can be used to change the maximum number of lines of history to be displayed.
+       $HISTTIMEFORMAT  can be used to change the time format of history displayed.
+
+Que37.Display all the commands entered so far, now, try to run a particular command from the history list without typing that command.
+Ans. History command is used to view the commands entered so far and upper arrow can be used to access the command from history list.
+
+NOTE:- TAB key is your friend when it comes to command completion and having long file and directory names autocompleted at the bash prompt for you. JUST BE LAZY AND USE TAB KEY FOR AUTO COMPLETION ;-)
+
+Que38.What are the different types of shell and where are they used and how do we use them?
+Ans. C shell (csh)-/bin/csh.
+        Bourne Shell (sh)-/bin/sh and /sbin/sh.
+        Korn shell (ksh)-/bin/ksh
+        Bourne Again shell ( bash)-/bin/bash
+
+Que39.What is the difference between login shell and non-login shell?
+Ans. The output is the name of our shell, prepended by a dash, then it is a login shell. example -bash, -su etc.
+       A Non login shell is started by a program without a login. In this case, the program just passes the name of the shell executable.
+
+Que40.How do we start login shell and non-login shell?
+Ans. A login shell is a shell given to a user upon login into their user account. This is initiated by using the -l or --login option, or placing a dash as the initial character of the command name, for example invoking bash as -bash.
+A Non login shell is started by a program without a login.
+
+Que41.What happens when you start a login shell (which files are read and used and Why)?
+Ans. Login process calls ~/.bash_profile
+
+Que42.What happens when you start a non-login shell (Which files are read and used and Why)?
+Ans.Non-login process(shell) calls ~/.bashrc
+
+Que43.What are Shell Configuration Files, why do we need it?
+Ans. This file contains individual specific configurations. This file is read at login and also each time a new Bash shell is started. Ideally, this is where you should place any aliases. This file is used to customize key bindings/key strokes.
+
+Que44.Explain the Order of file usage from the system/user's home directory when user logs in to the System.
+Ans. /etc/profile -> /etc/profile.d/-> ~/.bash_profile-> ./bashrc-> etc/bashrc
+
+Que45.What are Shell Variables, list major shell variables and what do they represent?
+Ans.Variables store the data in the form of characters and numbers.Shell variables are used to store information and they can by the shell only.
+      "variable_name=variable_value". For example, the command "set FILE_NAME=file1" creates the shell variable named "FILE_NAME" with a value of "file1".
+
+Que46.How we see all our env variables?
+Ans. env or printenv
+
+Que47.How we see all env variables in alphabical order?
+Ans. printenv | sort
+
+Que48.What Format does the env var and its values are stored?
+Ans. AUTOEXEC. BAT file
+
+Que49.How do you create your own varible?
+Ans. assigning a value to a name using the '=' operator.
+
+Que50.How do you start a new bash shell?
+Ans. first make file like vi filename.sh edit some text in file with first line #!/bin/sh save text then use bash filename.sh
+
+Que51.Difference between Local/Shell variables to Global Variable
+Ans. Normally all our variables are local. Local variable can be used in same shell, if you load another copy of shell (by typing the /bin/bash at the $ prompt) then new shell ignored all old shell's variable.
+You can copy old shell's variable to new shell (i.e. first shells variable to seconds shell), such variable is know as Global Shell variable.
+
+Que52.Making a variable accessible from other the shell in the system.
+Ans.~/.profile 
+(If you want to make a variable available to every new process, then you can put it in /etc/environment (requires root privileges) or ~/. profile . Once you put it in these variables, you typically have to re-login.)
+
+Que53.Show the real life use case of exporting a variable
+Ans. We can export a variable from parent process to child process.
+     Simply set the value for a variable before exporting "export name[=value]"
+     export -p to check the exported variables.
+
+Que54.Convert the above script file into a command, The file should run with "myappp" instead of "myapp.sh"
+Ans. Give execution rights to the scripts file using chmod u+x <filename>
+     Append the path of the executale script file to PATH variable in .bash_profile file
+     Write a code in script file starting with shebang "#!/bin/bash" and save it.
+     Now we need to source .bash_profile once then we can run myapp.sh as a command.
+
+Que55.What is Globbing? Explain in depth with examples?
+Ans. Globbing is an operation that recognizes the wildcard pattern and expands it into its path name.
+
+Que56.List all entries with extension ".sh"
+Ans. ls -a *.sh
+
+Que57.List all entries with numbers in it.
+Ans. ls *[0-9]*
+
+Que58.List all entries that starts with a character and ends with a number
+Ans. 
+
+Que59.List all entries that name length more than 5 characters
+Ans. ls [{a-z}, {A-Z}] *[0-9]
+
+Que60.What is Quoting? and Why do we need it?
+Ans.Quoting is used to remove the special meaning of certain characters or words to the shell. Quoting can be used to disable special treatment for special characters, to prevent reserved words from being recognized as such, and to prevent parameter expansion.
+
+Que61.Write few(minimum 3) unique examples that shows, how a particular problem is solved using Quoting.
+Ans. 1. echo "Hello world :)"- here the quotation will cause the shell to ignore the ":" sign.
+     2. echo  hello to learning/ 
+                lets start learning/ - continuous writing
+                with coding.
+     3. echo 'hello/'
+
+Que62.How do you find a particular files/directories based on a particular search criteria?
+HINT:- look for commands -> locate, find and whereis
+
+Que63.Write major difference between locate, find and whereis?
+Ans. Locate followed by the file name displays the absolute path name where that file exists.
+The approach to search for files within any specified directory is to use the find command.
+Find is able to recursively search any given path for various files. Using the file command we can search for files by name, owner, group, permissions, type, size, time modified, date and various other criteria.
+whereis finds the binary, the source, and the man page files for a program.
+
+Que64.How Globbing is different from locate, find and whereis?
+Ans. Globbing is mainly used to match filenames or searching for content in a file.locate simply looks its database and reports the file location whereas find does not use a database, it traverses all the directories and their sub directories and looks for files matching the given criterion and whereis commands only give the location of installed application. 
+
+Que65.Explain the Linux File System.
+Ans. Linux file system is generally a built-in layer of a Linux operating system used to handle the data management of the storage. It helps to arrange the file on the disk storage. It manages the file name, file size, creation date, and much more information about a file.
+
+Que66.Explain absolute and Relative Paths
+Ans. Absolute path starts from the directory root (/) and goes up to the actual object. Relative path starts from the current directory and goes up to the actual object.
+
+Que67.What are the different ways of creating a File in linux System? Write an example of each and the difference between them.
+Ans.touch filename-  easiest way to create a new file in Linux is by using the touch command. ex: touch index.txt.
+       >filename- redirection operator is a name for a character that changes the destination where the results are displayed. ex: >file1.txt.
+       cat>filename-cat command is short for concatenate. It can be used to output the contents of several files, one file, or even part of a file. ex: cat> file2.txt
+       echo'sample text'> filename-echo command will duplicate whatever you specify in the command, and put the copy into a file. ex:echo 'Hello'file3.txt
+
+Que68.In how many ways we can delete the files from linux system? write an example of each and teh difference between them.
+Ans.rm filename- remove particular file,
+ unlink filename- this also removes single file, 
+rm *.html- this will delete all the files of html, 
+rm filename1 filename2 filename3-this will remove multiple files.
+
+Que69.Archiving files using linux command, write a command to archive set of files from linux commands.
+Ans. tar -cvf myfiles.tar file1 file2
+
+Que70.Extract the archived files from the above step.
+Ans. tar -xvf myfiles.tar

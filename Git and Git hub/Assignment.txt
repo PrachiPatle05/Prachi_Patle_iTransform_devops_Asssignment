@@ -20,6 +20,10 @@ further sent a pull request to the owner of the repository to add my name in the
 Github repository link :- 
 https://github.com/PrachiPatle05/content-git-quickstart/tree/mystory
 
+-------CASE STUDY 2-----------
+In order to be able to provide secure access to any repositories that are in use, I created a special SSH key (separate from any that may have been created for other local systems to authenticate through) to be able to make an exchange with GitHub.
+
+
 
 -------CASE STUDY 3-----------
 
